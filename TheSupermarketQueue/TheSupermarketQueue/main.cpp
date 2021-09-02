@@ -22,11 +22,11 @@ N.B. You should assume that all the test input will be valid, as specified above
 #include <vector>
 #include <algorithm>
 
-auto QueueTime(const std::vector<unsigned int>& customers_time, const unsigned int n) -> int
+auto QueueTime(const std::vector<std::size_t>& customers_time, const std::size_t n) -> int
 {
-	const std::unique_ptr<unsigned int[]> tills = std::make_unique<unsigned int[]>(n);
+	const std::unique_ptr<std::size_t[]> tills = std::make_unique<std::size_t[]>(n);
 
-	for (unsigned int customer_time : customers_time)
+	for (std::size_t customer_time : customers_time)
 	{
 		// Add current customer time to the lowest time till
 		//
@@ -38,8 +38,8 @@ auto QueueTime(const std::vector<unsigned int>& customers_time, const unsigned i
 
 auto main() -> int
 {
-	const std::vector<unsigned int> customers_time = { 2, 3, 10};
-	const unsigned int n = 2;
+	const std::vector<std::size_t> customers_time = { 2, 3, 10};
+	const std::size_t n = 2;
 
 	std::cout << "Queue time: " << QueueTime(customers_time, n) << std::endl;
 	
