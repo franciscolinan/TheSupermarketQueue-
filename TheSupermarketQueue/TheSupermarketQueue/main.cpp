@@ -1,7 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
 /*
 There is a queue for the self-checkout tills at the supermarket. Your task is write a function to calculate 
 the total time required for all the customers to check out!
@@ -22,7 +18,11 @@ clarifications
 N.B. You should assume that all the test input will be valid, as specified above
 */
 
-auto QueueTime(const std::vector<unsigned int> customers_time, const unsigned int n) -> int
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+auto QueueTime(const std::vector<unsigned int>& customers_time, const unsigned int n) -> int
 {
 	const std::unique_ptr<unsigned int[]> tills = std::make_unique<unsigned int[]>(n);
 
