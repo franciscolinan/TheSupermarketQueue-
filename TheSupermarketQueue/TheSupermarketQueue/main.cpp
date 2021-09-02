@@ -42,4 +42,6 @@ auto main() -> int
 	const unsigned int n = 2;
 
 	std::cout << "Queue time: " << QueueTime(customers_time, n) << std::endl;
+	
+	return 0;
 }
